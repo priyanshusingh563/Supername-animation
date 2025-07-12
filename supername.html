@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Royal Name</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: radial-gradient(ellipse at center, #0f0c29, #302b63, #24243e);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 70px;
+      font-family: 'Segoe UI Black', sans-serif;
+      position: relative;
+      background: linear-gradient(90deg, #ff00cc, #3333ff, #00ffee, #00ff88, #ffcc00);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 5s ease-in-out infinite, glowPulse 2s ease-in-out infinite;
+      text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 0, 255, 0.5),
+        0 0 30px rgba(0, 255, 255, 0.4);
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0%; }
+      50% { background-position: 100%; }
+      100% { background-position: 0%; }
+    }
+
+    @keyframes glowPulse {
+      0% {
+        text-shadow:
+          0 0 10px #fff,
+          0 0 20px #ff00cc,
+          0 0 30px #ff00cc;
+      }
+      100% {
+        text-shadow:
+          0 0 20px #00ffff,
+          0 0 40px #00ffff,
+          0 0 60px #00ffff;
+      }
+    }
+
+    /* Shine Effect */
+    h1::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0.2) 100%
+      );
+      transform: skewX(-25deg);
+      animation: shine 3s infinite;
+    }
+
+    @keyframes shine {
+      0% { left: -75%; }
+      100% { left: 125%; }
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ AKASH BETA ✨</h1>
+</body>
+</html>

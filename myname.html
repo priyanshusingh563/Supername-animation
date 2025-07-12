@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Name Animation</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-family: 'Arial Black', sans-serif;
+      background: linear-gradient(90deg, #ff005e, #00d0ff, #00ff73, #f5d300);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow 4s linear infinite, glow 1.5s ease-in-out infinite alternate;
+      text-shadow: 0 0 10px #fff;
+    }
+
+    @keyframes rainbow {
+      0% { background-position: 0% }
+      100% { background-position: 100% }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff, 0 0 20px #ff00cc, 0 0 30px #ff00cc; }
+      to { text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🌟 SHREE SURESH SINGH 🌟</h1>
+</body>
+</html>
